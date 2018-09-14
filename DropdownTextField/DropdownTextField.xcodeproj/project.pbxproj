@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		29A40644214A55EB00EA1003 /* DropdownTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 29A40642214A55EB00EA1003 /* DropdownTextField.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29B18908214B793700F20741 /* DropdownTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B18907214B793700F20741 /* DropdownTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		29A4063F214A55EB00EA1003 /* DropdownTextField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DropdownTextField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29A40642214A55EB00EA1003 /* DropdownTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropdownTextField.h; sourceTree = "<group>"; };
 		29A40643214A55EB00EA1003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		29B18907214B793700F20741 /* DropdownTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +32,7 @@
 		29A40635214A55EB00EA1003 = {
 			isa = PBXGroup;
 			children = (
+				29B18909214B793C00F20741 /* Sources */,
 				29A40641214A55EB00EA1003 /* DropdownTextField */,
 				29A40640214A55EB00EA1003 /* Products */,
 			);
@@ -50,6 +53,14 @@
 				29A40643214A55EB00EA1003 /* Info.plist */,
 			);
 			path = DropdownTextField;
+			sourceTree = "<group>";
+		};
+		29B18909214B793C00F20741 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				29B18907214B793700F20741 /* DropdownTextField.swift */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +106,7 @@
 				TargetAttributes = {
 					29A4063E214A55EB00EA1003 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -130,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29B18908214B793700F20741 /* DropdownTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +272,7 @@
 		29A40648214A55EB00EA1003 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -276,6 +290,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bkplus.DropdownTextField;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -284,6 +299,7 @@
 		29A40649214A55EB00EA1003 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
