@@ -18,7 +18,6 @@ public enum DropDownMode {
 	@objc optional func didSelectedItem(textfield: DropDownTextField, item: String)
 	@objc optional func didSelectedDate(textfield: DropDownTextField, date: Date)
 	@objc optional func didSelectedDone(textfield: DropDownTextField)
-	
 }
 
 @IBDesignable public class DropDownTextField: UITextField {
