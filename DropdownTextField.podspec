@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "DropdownTextField"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "DropdownTextField lets user select DatePicker, Picker List ..."
 
   # This description is used to generate tags and improve search results.
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = "DropdownTextField lets user select DatePicker, Picker List ..."
+  s.description  = "DropdownTextField is a library lets user select DatePicker, Picker List ..."
 
   s.homepage     = "https://github.com/bkplus-techs/DropdownTextField"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -66,7 +66,7 @@ Pod::Spec.new do |s|
   # s.platform     = :ios, "11.0"
 
   #  When using multiple platforms
-  s.ios.deployment_target = "11.0"
+  s.ios.deployment_target = "9.0"
   # s.osx.deployment_target = "10.7"
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target = "9.0"
@@ -104,7 +104,7 @@ Pod::Spec.new do |s|
   #
 
   # s.resource  = "icon.png"
-  s.resources = "DropdownTextField/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
+  # s.resources = "DropdownTextField/**/*.{png,jpeg,jpg,storyboard,xib,xcassets}"
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
@@ -132,5 +132,5 @@ Pod::Spec.new do |s|
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # s.dependency "JSONKit", "~> 1.4"
-  s.swift_version = "4.1"
+  s.swift_version = "3.2"
 end
