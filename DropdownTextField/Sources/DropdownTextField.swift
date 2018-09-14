@@ -24,9 +24,9 @@ public enum DropDownMode {
 @IBDesignable public class DropDownTextField: UITextField {
 	
 	// MARK: - Properties
-	var dropDownMode: DropDownMode = .textField
+	public var dropDownMode: DropDownMode = .textField
 	
-	var currentDate: Date?{
+	public var currentDate: Date?{
 		didSet {
 			if let currentDate = currentDate{
 				datePicker?.date = currentDate
@@ -38,7 +38,7 @@ public enum DropDownMode {
 	private var datePicker: UIDatePicker?
 	private var pickerView: UIPickerView?
 	
-	weak var dropDowndelegate: DropDownTextFieldDelegate?
+	weak public var dropDowndelegate: DropDownTextFieldDelegate?
 	
 	var minimumDate: Date?
 	var maximumDate: Date?
@@ -69,7 +69,7 @@ public enum DropDownMode {
 		setDropDownMode(mode: .textField)
 	}
 	
-	@IBInspectable var mode: Int = 0 {
+	@IBInspectable public var mode: Int = 0 {
 		didSet {
 			switch mode {
 			case 0:
@@ -86,7 +86,7 @@ public enum DropDownMode {
 	
 	/* Public func */
 	// MARK: - setup pickers
-	func setDropDownMode(mode: DropDownMode) {
+	public func setDropDownMode(mode: DropDownMode) {
 		dropDownMode = mode
 		switch mode {
 		case .datePicker:
@@ -98,7 +98,7 @@ public enum DropDownMode {
 		}
 	}
 	
-	func setListItems(items: [String]) {
+	public func setListItems(items: [String]) {
 		switch dropDownMode {
 		case .textPicker:
 			listItems = items
@@ -110,26 +110,30 @@ public enum DropDownMode {
 	}
 	
 	// Call this func if you has a value before
-	func setSelectItem(item: String, animated: Bool = true) {
+	public func setSelectItem(item: String, animated: Bool = true) {
 		selectedItem(selectedItem: item, animated: false, shouldNotify: false)
 	}
 	
-	func setDateFormater(dFormat: DateFormatter) {
+	public func setDateFormater(dFormat: DateFormatter) {
 		dropDownDateFormater = dFormat
 		datePicker?.locale = dropDownDateFormater.locale
 	}
 	
-	func setMinimumDate(minDate: Date) {
+	public func setMinimumDate(minDate: Date) {
 		minimumDate = minDate
 		datePicker?.minimumDate = minDate
 	}
 	
-	func setMaximumDate(maxDate: Date) {
+	public  func setMaximumDate(maxDate: Date) {
 		maximumDate = maxDate
 		datePicker?.maximumDate = maxDate
 	}
 	
-	/* Private func */
+	public func setDefaultValue(value: String) {
+		selectedItem(selectedItem: value, animated: true, shouldNotify: true)
+	}
+	
+	//MARK: Private funcs
 	fileprivate func setDatePicker() -> UIDatePicker {
 		if self.datePicker == nil {
 			self.datePicker = UIDatePicker()
@@ -171,10 +175,6 @@ public enum DropDownMode {
 	
 	@objc private func dateChanged(dPicker: UIDatePicker) {
 		selectedItem(selectedItem: self.dropDownDateFormater.string(from: dPicker.date), animated: true, shouldNotify: true)
-	}
-	
-	func setDefaultValue(value: String) {
-		selectedItem(selectedItem: value, animated: true, shouldNotify: true)
 	}
 	
 	fileprivate func selectedItem(selectedItem: String, animated: Bool = true, shouldNotify: Bool = true) {
