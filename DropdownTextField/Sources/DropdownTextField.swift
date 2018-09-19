@@ -23,7 +23,6 @@ public enum DropDownMode {
 @IBDesignable public class DropDownTextField: UITextField {
 	
 	// MARK: - Properties
-	public var dropDownMode: DropDownMode = .textField
 	
 	public var currentDate: Date?{
 		didSet {
@@ -34,6 +33,7 @@ public enum DropDownMode {
 		}
 	}
 	
+	private var dropDownMode: DropDownMode = .textField
 	private var minimumDate: Date?
 	private var maximumDate: Date?
 	private var datePicker: UIDatePicker?
@@ -58,12 +58,11 @@ public enum DropDownMode {
 	}
 	
 	fileprivate func initialize() {
-		// Date format
+		
 		dropDownDateFormater.dateStyle = .medium
 		dropDownDateFormater.timeStyle = .none
 		
 		self.inputAccessoryView = setupToolbar()
-		
 		setDropDownMode(mode: .textField)
 	}
 	
