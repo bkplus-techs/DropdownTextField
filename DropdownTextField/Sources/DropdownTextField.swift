@@ -43,7 +43,7 @@ public enum DropDownMode {
 	private var maximumDate: Date?
 	
 	/*List items for DropDownModeTextPicker*/
-	private var listItems = [String]()
+	var listItems = [String]()
 	
 	/*Mode DatePicker*/
 	private var dropDownDateFormater = DateFormatter()
