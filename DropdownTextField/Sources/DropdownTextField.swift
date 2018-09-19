@@ -34,13 +34,12 @@ public enum DropDownMode {
 		}
 	}
 	
+	private var minimumDate: Date?
+	private var maximumDate: Date?
 	private var datePicker: UIDatePicker?
 	private var pickerView: UIPickerView?
 	
 	weak public var dropDowndelegate: DropDownTextFieldDelegate?
-	
-	private var minimumDate: Date?
-	private var maximumDate: Date?
 	
 	/*List items for DropDownModeTextPicker*/
 	var listItems = [String]()
