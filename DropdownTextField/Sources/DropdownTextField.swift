@@ -39,14 +39,14 @@ public enum DropDownMode {
 	
 	weak public var dropDowndelegate: DropDownTextFieldDelegate?
 	
-	var minimumDate: Date?
-	var maximumDate: Date?
+	private var minimumDate: Date?
+	private var maximumDate: Date?
 	
 	/*List items for DropDownModeTextPicker*/
-	var listItems = [String]()
+	private var listItems = [String]()
 	
 	/*Mode DatePicker*/
-	var dropDownDateFormater = DateFormatter()
+	private var dropDownDateFormater = DateFormatter()
 	
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -132,13 +132,17 @@ public enum DropDownMode {
 		selectedItem(selectedItem: value, animated: true, shouldNotify: true)
 	}
 	
+	public func setDatePickerMode(mode: UIDatePickerMode) {
+		self.datePicker?.datePickerMode = mode
+	}
+	
 	//MARK: Private funcs
 	fileprivate func setDatePicker() -> UIDatePicker {
 		if self.datePicker == nil {
 			self.datePicker = UIDatePicker()
 			self.datePicker?.backgroundColor = .white
 			self.datePicker?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-			self.datePicker?.datePickerMode = .date
+			self.datePicker?.datePickerMode = .dateAndTime
 			self.datePicker?.addTarget(self, action: #selector(DropDownTextField.dateChanged(dPicker:)), for: .valueChanged)
 		}
 		

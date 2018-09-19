@@ -1,0 +1,77 @@
+
+/* add news */
+
+{
+	"fromLocation": {
+		"fullAddress": "",
+		"name": "",
+		"city": "",
+		"district" : "",
+		"country": "",
+		"longtitude": 1234.11,
+		"lattitude" : 232323.3232,
+		"placeID": ""
+	},
+	"toLocation": {
+		"fullAddress": "",
+		"name": "",
+		"city": "",
+		"district" : "",
+		"country": "",
+		"longtitude": 1234.11,
+		"lattitude" : 232323.3232,
+		"placeID": ""
+	},
+
+	"title": "",
+	"time": ""
+}
+
+/* get news*/
+{
+    "message": "success",
+    "page": 1,
+    "status": 200,
+    "total": 7,
+    "rides": [
+        {
+            "ID": 9,
+            "CreatedAt": "2018-09-17T02:18:33Z",
+            "UpdatedAt": "2018-09-17T02:18:33Z",
+            "DeletedAt": null,
+           
+            "title": "Tìm xe từ Thái Bình về Nha Trang",
+            "content": "Mình có nhu cầu thuê xe có lái đi từ thanh xuân bắc về hưng hà- thái bình vào thứ 6 31/8/18. Mọi người có xe cung cấp bào giá giúp e vs ạ, thanks all",
+            "time": "2018-05-06T02:30:00Z",
+            "type_id": 1,
+            "status": 1,
+            "user": {
+            	"ID": "123",
+            	"fullName": "Diep nguyen",
+            	"avatarUrl": "http://",
+            	"phoneNumber" : "0977",
+            	"rateStar": 3.2
+            },
+            "toLocation": {
+				"fullAddress": "",
+				"name": "",
+				"city": "",
+				"district" : "",
+				"country": "",
+				"longtitude": 1234.11,
+				"lattitude" : 232323.3232,
+				"placeID": ""
+			},
+			"fromLocation": {
+				"fullAddress": "",
+				"name": "",
+				"city": "",
+				"district" : "",
+				"country": "",
+				"longtitude": 1234.11,
+				"lattitude" : 232323.3232,
+				"placeID": ""
+			}
+        }
+    ]
+}
