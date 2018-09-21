@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "DropdownTextField"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "DropdownTextField lets user select DatePicker, Picker List ..."
 
   # This description is used to generate tags and improve search results.
